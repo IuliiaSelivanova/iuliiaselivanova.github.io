@@ -1,0 +1,31 @@
+.about{
+  margin-top: 80px;
+  padding-top: 5.7rem;
+
+  &__content{
+    display: flex;
+    column-gap: 70px;
+    justify-content: space-between;
+  }
+
+  &__info{
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__subtitle{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    line-height: 1.5;
+  }
+  &__title{
+    line-height: 1.125;
+    font-size: 5.3rem;
+  }
+
+  &__img{
+    max-width: 350px;
+  }
+}

@@ -1,0 +1,38 @@
+.logo__text {
+  color: var(--primary-clr);
+  font-weight: var(--fw-extrabold);
+}
+.logo img {
+  position: absolute;
+  top: 22px;
+}
+
+/* Точка в логотипе */
+.point-wrapper {
+  position: relative;
+  width: 28px;
+  height: 28px;
+}
+.point {
+  background-color: var(--accent-clr);
+  position: absolute;
+  top: -5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+/* Анимация логотипа */
+.logo:hover .point-wrapper,
+.logo:focus .point-wrapper {
+  animation: circle 1.5s;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

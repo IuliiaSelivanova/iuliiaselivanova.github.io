@@ -4,8 +4,8 @@ import Logo from "../../ui/logo/Logo";
 
 const Navigation = () => {
   return (
-    <nav className="navbar fixed-top">
-      <div className="container-fluid">
+    <nav className="navbar">
+      <div className="container">
         <Logo />
         <button
           className="navbar-toggler"
@@ -15,7 +15,7 @@ const Navigation = () => {
           aria-controls="offcanvasNavbar"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <i class="bi bi-list"></i>
         </button>
         <div
           className="offcanvas offcanvas-end"

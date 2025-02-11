@@ -6,9 +6,7 @@ import Logo from "../ui/logo/Logo";
 const Header = () => {
   return (
     <>
-      <header className="header container d-flex justify-content-between align-items-center mt-2">
-        <Navigation />
-      </header>
+      <Navigation />
     </>
   );
 };

@@ -5,29 +5,23 @@ import "./navigation.scss";
 const Navigation = () => {
   return (
     <>
-      <ul className="nav nav-underline">
+      <ul className="nav">
         <li className="nav-item">
           <Link
             to="/"
-            className="nav-link text-dark active"
+            className="nav-link"
             aria-current="page"
           >
             Обо мне
           </Link>
         </li>
         <li className="nav-item">
-          <Link
-            to="/portfolio"
-            className="nav-link text-dark"
-          >
+          <Link to="/portfolio" className="nav-link">
             Проекты
           </Link>
         </li>
         <li className="nav-item">
-          <Link
-            to="/contacts"
-            className="nav-link text-dark"
-          >
+          <Link to="/contacts" className="nav-link">
             Контакты
           </Link>
         </li>

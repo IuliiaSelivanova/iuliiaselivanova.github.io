@@ -1,0 +1,21 @@
+.skills {
+  &__title {
+    font-weight: var(--fw-bold);
+    margin-block: 1rem;
+  }
+
+  &__wrapper {
+    width: 100%;
+    overflow: auto;
+
+    &:nth-child(n) {
+      margin-right: 10px;
+    }
+  }
+
+  &__item {
+    img {
+      max-width: 50px;
+    }
+  }
+}

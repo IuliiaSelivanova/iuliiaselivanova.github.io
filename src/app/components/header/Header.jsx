@@ -10,7 +10,6 @@ const Header = () => {
         <Logo />
         <Navigation />
       </header>
-      <div className="header__line"></div>
     </>
   );
 };

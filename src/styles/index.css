@@ -40,6 +40,8 @@ body {
 a {
   text-decoration: none;
 }
+img {
+}
 
 /* a:visited {
   color: var(--text-clr);

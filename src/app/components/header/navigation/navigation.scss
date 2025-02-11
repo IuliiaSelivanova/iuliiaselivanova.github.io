@@ -1,0 +1,14 @@
+.nav-link,
+.nav-lick:visited {
+  color: var(--primary-clr);
+}
+
+.nav-livk.active,
+.nav-link:hover,
+:focus {
+  color: var(--accent-clr);
+  border-bottom: 2px solid var(--accent-clr);
+}
+
+.nav-livk.active {
+}

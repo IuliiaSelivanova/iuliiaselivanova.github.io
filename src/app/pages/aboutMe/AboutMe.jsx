@@ -4,6 +4,7 @@ import Button from "../../components/ui/btn/Button";
 import downloadIcon from "../../../assets/icons/download-icon.svg";
 import Skills from "../../components/skills/Skills";
 import "./aboutMe.scss";
+import Projects from "../../components/projects/Projects";
 
 const AboutMe = () => {
   const triggerDownload = (fileName) => {
@@ -44,6 +45,8 @@ const AboutMe = () => {
         </div>
       </section>
       <Skills />
+
+      <Projects />
     </div>
   );
 };

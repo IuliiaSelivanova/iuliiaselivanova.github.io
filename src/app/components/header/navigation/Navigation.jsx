@@ -1,32 +1,59 @@
-import React from "react";
-import { Link } from "react-router";
+import React, { useState } from "react";
 import "./navigation.scss";
+import Logo from "../../ui/logo/Logo";
 
 const Navigation = () => {
   return (
-    <>
-      <ul className="nav">
-        <li className="nav-item">
-          <Link
-            to="/"
-            className="nav-link"
-            aria-current="page"
-          >
-            Обо мне
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/portfolio" className="nav-link">
-            Проекты
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/contacts" className="nav-link">
-            Контакты
-          </Link>
-        </li>
-      </ul>
-    </>
+    <nav className="navbar fixed-top">
+      <div className="container-fluid">
+        <Logo />
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div
+          className="offcanvas offcanvas-end"
+          tabIndex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div className="offcanvas-header">
+            <Logo />
+            <button
+              type="button"
+              className="btn btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div className="offcanvas-body">
+            <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="#">
+                  Обо мне
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Проекты
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 };
 

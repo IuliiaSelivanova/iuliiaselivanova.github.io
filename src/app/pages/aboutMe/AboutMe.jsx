@@ -16,34 +16,35 @@ const AboutMe = () => {
     document.body.removeChild(element);
   };
   return (
-    <section className="about mt-4">
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col">
-            <span className="">Frontend-разработчик</span>
-            <h1 className="">Привет, меня зовут Юлия Селиванова</h1>
-            <p className="">
-              Я начинающий frontend разработчик, который строит новую карьеру на
-              том, что мне действительно нравится. В течение года я оттачивала
-              свои навыки веб-разработчика, изучая, как создавать веб-приложения
-              с использованием HTML, CSS, JavaScript, React.
-            </p>
-            <Button
-              value="Резюме"
-              icon={downloadIcon}
-              btnClassName={"about__btn"}
-              onClick={triggerDownload}
-            />
-          </div>
+    <div className="">
+      <section className="about mt-4">
+        <div className="container">
+          <div className="row align-items-center flex-column flex-md-row-reverse">
+            <div className="col-12 col-md d-flex justify-content-center about__img">
+              <img src={img} alt="portret" className="img-fluid" />
+            </div>
 
-          <div className="col d-flex justify-content-center about__img">
-            <img src={img} alt="" />
+            <div className="col-12 col-md">
+              <span className="subtitle">Frontend-разработчик</span>
+              <h1 className="title">Привет, меня зовут Юлия Селиванова</h1>
+              <p className="text">
+                Я начинающий frontend разработчик, который строит новую карьеру
+                на том, что мне действительно нравится. В течение года я
+                оттачивала свои навыки веб-разработчика, изучая, как создавать
+                веб-приложения с использованием HTML, CSS, JavaScript, React.
+              </p>
+              <Button
+                value="Резюме"
+                icon={downloadIcon}
+                btnClassName={"about__btn"}
+                onClick={triggerDownload}
+              />
+            </div>
           </div>
         </div>
-      </div>
-
+      </section>
       <Skills />
-    </section>
+    </div>
   );
 };
 

@@ -15,11 +15,11 @@
 }
 
 /* ScrollBar */
-html {
+/* html {
   scroll-behavior: smooth;
 }
 html::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 html::-webkit-scrollbar-track {
   background: var(--clr-text);
@@ -28,7 +28,7 @@ html::-webkit-scrollbar-thumb {
   background: var(--accent-clr);
   border-radius: 8px;
   width: 0.5rem;
-}
+} */
 
 body {
   font-size: 17px;
@@ -43,6 +43,14 @@ a {
 img {
 }
 
+.subtitle {
+}
+
+.title {
+}
+
+.text {
+}
 /* a:visited {
   color: var(--text-clr);
 }

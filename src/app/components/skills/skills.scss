@@ -1,21 +1,44 @@
 .skills {
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  left: 0;
   &__title {
     font-weight: var(--fw-bold);
     margin-block: 1rem;
   }
 
   &__wrapper {
-    width: 100%;
-    overflow: auto;
-
-    &:nth-child(n) {
-      margin-right: 10px;
-    }
+    flex-wrap: wrap;
   }
 
   &__item {
+    // display: inline-block;
+
     img {
       max-width: 50px;
     }
   }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills {
+    width: 100%;
+    position: static;
+  }
+  // .skills__wrapper--scroll {
+  //   -webkit-animation: scroll 10s infinite linear;
+  //   -moz-animation: scroll 10s infinite linear;
+  //   animation: scroll 10s infinite linear;
+  //   animation-delay: 3s;
+  // }
 }

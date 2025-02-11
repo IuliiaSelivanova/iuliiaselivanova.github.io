@@ -9,7 +9,7 @@ const ProjectItem = ({ project }) => {
       <h3>{project.title}</h3>
       <ul>
         {project.stack.map((item) => (
-          <li key={`item_${Date.now()}`}>{item}</li>
+          <li key={item.id}>{item.name}</li>
         ))}
       </ul>
 

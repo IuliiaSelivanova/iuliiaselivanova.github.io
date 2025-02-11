@@ -15,7 +15,7 @@ const Navigation = () => {
           aria-controls="offcanvasNavbar"
           aria-label="Toggle navigation"
         >
-          <i class="bi bi-list"></i>
+          <i className="bi bi-list"></i>
         </button>
         <div
           className="offcanvas offcanvas-end"

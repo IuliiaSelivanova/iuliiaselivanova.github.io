@@ -6,7 +6,7 @@ const projects = [
   {
     id: 1,
     title: "Product page",
-    stack: ["React"],
+    stack: [{ id: 1, name: "React" }],
     repo: "https://github.com/IuliiaSelivanova/e-commerce-product-page",
     website: "https://iuliiaselivanova.github.io/e-commerce-product-page/",
     image: images["../../assets/images/projects/product-page.png"].default,
@@ -15,7 +15,11 @@ const projects = [
   {
     id: 3,
     title: "Music player",
-    stack: ["HTML", "CSS", "JavaScript"],
+    stack: [
+      { id: 1, name: "HTML" },
+      { id: 2, name: "CSS" },
+      { id: 3, name: "JavaScript" },
+    ],
     repo: "https://github.com/IuliiaSelivanova/Music-player",
     website: "https://iuliiaselivanova.github.io/Music-player/",
     image: images["../../assets/images/projects/music-player.png"].default,
@@ -23,7 +27,12 @@ const projects = [
   {
     id: 4,
     title: "Lading page",
-    stack: ["HTML", "CSS", "JavaScript", "Gulp"],
+    stack: [
+      { id: 1, name: "HTML" },
+      { id: 2, name: "CSS" },
+      { id: 3, name: "JavaScript" },
+      { id: 4, name: "Gulp" },
+    ],
     repo: "https://github.com/IuliiaSelivanova/MNTN",
     website: "iuliiaselivanova.github.io/MNTN/",
     image: images["../../assets/images/projects/landing-page.png"].default,

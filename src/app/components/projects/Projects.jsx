@@ -7,7 +7,7 @@ const Projects = () => {
     <section>
       <h2>Портфолио</h2>
       {projects.map((project) => (
-        <ProjectItem project={project} />
+        <ProjectItem key={project.id} project={project} />
       ))}
     </section>
   );

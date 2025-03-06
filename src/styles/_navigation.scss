@@ -1,0 +1,47 @@
+@use "./vars.scss";
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+.nav-link {
+  color: vars.$primary-clr;
+  font-weight: vars.$fw-bold;
+  font-size: 1.4rem;
+
+  &:hover,
+  :focus {
+    color: vars.$accent-clr;
+  }
+}
+
+.navbar-toggler {
+  border: none;
+
+  &:focus,
+  :hover {
+    box-shadow: none;
+    opacity: 0.5;
+  }
+
+  &-icon {
+    background-image: url(../assets/icons/burger-menu.svg);
+  }
+}
+
+.btn-close {
+  opacity: 1;
+
+  &:hover,
+  :focus {
+    opacity: 0.5;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .nav-item {
+    border-bottom: 1px solid vars.$clr-text;
+  }
+}

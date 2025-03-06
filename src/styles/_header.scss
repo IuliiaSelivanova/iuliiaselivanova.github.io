@@ -1,8 +1,18 @@
-@use "./navigation.scss";
+@use "./vars.scss";
 @use "./logo.scss";
+@use "./navigation.scss";
 
-/* .header__line {
-  height: 5px;
-  background-color: #82828286;
-  width: 100%;
-} */
+.full-width-container {
+  &::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: vars.$clr-text;
+  }
+}
+
+.header {
+  height: 90px;
+  padding-block: 20px;
+}

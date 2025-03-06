@@ -4,55 +4,23 @@
 @use "./projects.scss";
 @use "./contacts.scss";
 
-/* ScrollBar */
-/* html {
-  scroll-behavior: smooth;
-}
-html::-webkit-scrollbar {
-  width: 5px;
-}
-html::-webkit-scrollbar-track {
-  background: vars.$clr-text;
-}
-html::-webkit-scrollbar-thumb {
-  background: vars.$accent-clr;
-  border-radius: 8px;
-  width: 0.5rem;
-} */
-
+html,
 body {
-  font-size: 17px;
+  background-color: vars.$clr-main-bg;
   font-family: vars.$ff-primary;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.65;
+  height: 100%;
 }
 
-a {
-  text-decoration: none;
-}
-img {
-}
-
-.subtitle {
+@media screen and (min-width: 1600px) {
+  .container {
+    max-width: 1580px;
+  }
 }
 
-.title {
-}
-
-.text {
-}
-/* a:visited {
-  color: vars.text-clr;
-}
-a:hover,
-a:focus {
-  color: chartreuse;
-} */
-
-/* .container {
-  width: 1080px;
-  margin-inline: auto;
-}
+/* 
 
 @media screen and (min-width: 768px) {
   .container {

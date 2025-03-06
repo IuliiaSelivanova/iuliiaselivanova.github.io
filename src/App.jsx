@@ -6,12 +6,12 @@ import Contacts from "./pages/Contacts.jsx";
 
 function App() {
   return (
-    <>
+    <div>
       <Header />
       <About />
       <Portfolio />
       <Contacts />
-    </>
+    </div>
   );
 }
 

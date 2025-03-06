@@ -1,18 +1,8 @@
-:root {
-  --ff-primary: "Nunito", sans-serif;
-  --ff-title: "Playfair Display", sans-serif;
-  --ff-btn: "Roboto", sans-serif;
-
-  --fw-regular: 400;
-  --fw-medium: 500;
-  --fw-bold: 700;
-  --fw-extrabold: 900;
-
-  --clr-main-bg: #f9faff;
-  --primary-clr: #25282b;
-  --accent-clr: #fdc435;
-  --clr-text: #828282;
-}
+@use "./vars.scss";
+@use "./header.scss";
+@use "./about.scss";
+@use "./projects.scss";
+@use "./contacts.scss";
 
 /* ScrollBar */
 /* html {
@@ -22,17 +12,17 @@ html::-webkit-scrollbar {
   width: 5px;
 }
 html::-webkit-scrollbar-track {
-  background: var(--clr-text);
+  background: vars.$clr-text;
 }
 html::-webkit-scrollbar-thumb {
-  background: var(--accent-clr);
+  background: vars.$accent-clr;
   border-radius: 8px;
   width: 0.5rem;
 } */
 
 body {
   font-size: 17px;
-  font-family: var(--ff-primary);
+  font-family: vars.$ff-primary;
   font-weight: 400;
   line-height: 1.65;
 }
@@ -52,7 +42,7 @@ img {
 .text {
 }
 /* a:visited {
-  color: var(--text-clr);
+  color: vars.text-clr;
 }
 a:hover,
 a:focus {

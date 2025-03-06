@@ -1,6 +1,8 @@
+@use "./vars.scss";
+
 .logo__text {
-  color: var(--primary-clr);
-  font-weight: var(--fw-extrabold);
+  color: vars.$primary-clr;
+  font-weight: vars.$fw-extrabold;
 }
 .logo img {
   position: absolute;
@@ -14,7 +16,7 @@
   height: 28px;
 }
 .point {
-  background-color: var(--accent-clr);
+  background-color: vars.$accent-clr;
   position: absolute;
   top: -5px;
   width: 5px;

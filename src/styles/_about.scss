@@ -1,3 +1,6 @@
+@use "./skills";
+@use "./button";
+
 .about {
   margin-bottom: 2rem;
   &__img {

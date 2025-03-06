@@ -1,10 +1,12 @@
+@use "./vars.scss";
+
 .skills {
   width: 100%;
   position: sticky;
   bottom: 0;
   left: 0;
   &__title {
-    font-weight: var(--fw-bold);
+    font-weight: vars.$fw-bold;
     margin-block: 1rem;
   }
 

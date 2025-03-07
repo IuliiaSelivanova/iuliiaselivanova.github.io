@@ -12,7 +12,7 @@ const Skills = () => {
   useEffect(() => {
     const handleResize = () => {
       if (skillsRef.current) {
-        // ширина блока с навыками + 40px padding родительского блока >= ширины окна
+        // ширина блока с навыками >= ширины окна
         setIsMobile(
           skillsRef.current.offsetWidth >=
             window.innerWidth,

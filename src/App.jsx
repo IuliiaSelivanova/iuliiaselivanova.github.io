@@ -7,7 +7,7 @@ import { Route, Routes } from "react-router";
 
 function App() {
   return (
-    <div className="app d-flex flex-column justify-content-between">
+    <div className="app d-flex flex-column">
       <Header />
 
       <Routes>

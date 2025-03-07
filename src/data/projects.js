@@ -1,6 +1,9 @@
-const images = import.meta.glob("../../assets/images/projects/*.png", {
-  eager: true,
-});
+const images = import.meta.glob(
+  "../assets/images/projects/*.png",
+  {
+    eager: true,
+  },
+);
 
 const projects = [
   {
@@ -8,24 +11,14 @@ const projects = [
     title: "Product page",
     stack: [{ id: 1, name: "React" }],
     repo: "https://github.com/IuliiaSelivanova/e-commerce-product-page",
-    website: "https://iuliiaselivanova.github.io/e-commerce-product-page/",
-    image: images["../../assets/images/projects/product-page.png"].default,
-  },
-
-  {
-    id: 3,
-    title: "Music player",
-    stack: [
-      { id: 1, name: "HTML" },
-      { id: 2, name: "CSS" },
-      { id: 3, name: "JavaScript" },
-    ],
-    repo: "https://github.com/IuliiaSelivanova/Music-player",
-    website: "https://iuliiaselivanova.github.io/Music-player/",
-    image: images["../../assets/images/projects/music-player.png"].default,
+    website:
+      "https://iuliiaselivanova.github.io/e-commerce-product-page/",
+    image:
+      images["../assets/images/projects/product-page.png"]
+        .default,
   },
   {
-    id: 4,
+    id: 2,
     title: "Lading page",
     stack: [
       { id: 1, name: "HTML" },
@@ -34,8 +27,26 @@ const projects = [
       { id: 4, name: "Gulp" },
     ],
     repo: "https://github.com/IuliiaSelivanova/MNTN",
-    website: "iuliiaselivanova.github.io/MNTN/",
-    image: images["../../assets/images/projects/landing-page.png"].default,
+    website: "https://iuliiaselivanova.github.io/MNTN/",
+    image:
+      images["../assets/images/projects/landing-page.png"]
+        .default,
+  },
+
+  {
+    id: 4,
+    title: "Music player",
+    stack: [
+      { id: 1, name: "HTML" },
+      { id: 2, name: "CSS" },
+      { id: 3, name: "JavaScript" },
+    ],
+    repo: "https://github.com/IuliiaSelivanova/Music-player",
+    website:
+      "https://iuliiaselivanova.github.io/Music-player/",
+    image:
+      images["../assets/images/projects/music-player.png"]
+        .default,
   },
 ];
 

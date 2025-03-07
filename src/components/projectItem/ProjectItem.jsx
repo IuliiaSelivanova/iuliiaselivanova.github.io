@@ -10,25 +10,29 @@ const ProjectItem = ({ project }) => {
       />
       <div className="card-body">
         <h3 className="card-title">{project.title}</h3>
-        <ul className="">
+        <ul className="d-flex justify-cotent-between flex-wrap">
           {project.stack.map((item) => (
-            <li key={item.id}>{item.name}</li>
+            <li className="m-1" key={item.id}>
+              {item.name}
+            </li>
           ))}
         </ul>
-        <a
-          className="btn btn-warning"
-          href={project.repo}
-          target="_blank"
-        >
-          Репозиторий
-        </a>
-        <a
-          className="btn btn-warning"
-          href={project.website}
-          target="_blank"
-        >
-          Web site
-        </a>
+        <div className="button-container d-flex justify-content-evenly">
+          <a
+            className="btn btn-warning"
+            href={project.repo}
+            target="_blank"
+          >
+            Репозиторий
+          </a>
+          <a
+            className="btn btn-warning"
+            href={project.website}
+            target="_blank"
+          >
+            Web site
+          </a>
+        </div>
       </div>
     </div>
   );

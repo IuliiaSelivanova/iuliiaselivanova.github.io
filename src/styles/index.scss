@@ -4,6 +4,10 @@
 @use "./projects.scss";
 @use "./contacts.scss";
 
+// * {
+//   border: 1px solid red;
+// }
+
 html,
 body {
   background-color: vars.$clr-main-bg;
@@ -14,26 +18,20 @@ body {
   height: 100%;
 }
 
+#root {
+  height: 100%;
+}
+
+.app {
+  height: 100%;
+}
+
+.bg-warning {
+  background-color: vars.$accent-clr !important;
+}
+
 @media screen and (min-width: 1600px) {
   .container {
     max-width: 1580px;
   }
 }
-
-/* 
-
-@media screen and (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-@media screen and (min-width: 990px) {
-  .container {
-    width: 970px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .container {
-    width: 1080px;
-  }
-} */

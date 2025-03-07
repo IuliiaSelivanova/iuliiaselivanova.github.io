@@ -29,7 +29,7 @@ const Navigation = () => {
           ></button>
         </div>
 
-        <ul className="navbar-nav flex-grow-1">
+        <ul className="navbar-nav flex-grow-1 justify-content-start">
           <li className="nav-item">
             <a
               className="nav-link"

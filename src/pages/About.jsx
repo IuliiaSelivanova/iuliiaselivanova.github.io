@@ -2,9 +2,11 @@ import React from "react";
 import iconDownload from "../assets/icons/download-icon.svg";
 import mainPortret from "../assets/images/cat1.png";
 
+import Skills from "../components/skills/Skills.jsx";
+
 const AboutMe = () => {
   return (
-    <main className="about mt-4">
+    <main className="about d-flex flex-column justify-content-evenly align-items-center">
       <div className="container">
         <div className="row align-items-center flex-column flex-md-row-reverse">
           <div className="col-12 col-md d-flex justify-content-center about__img">
@@ -37,7 +39,7 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-      {/* <Skills /> */}
+      <Skills />
     </main>
   );
 };

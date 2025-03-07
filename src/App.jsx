@@ -6,11 +6,11 @@ import Contacts from "./pages/Contacts.jsx";
 
 function App() {
   return (
-    <div>
+    <div className="app d-flex flex-column justify-content-between">
       <Header />
       <About />
-      <Portfolio />
-      <Contacts />
+      {/* <Portfolio />
+      <Contacts /> */}
     </div>
   );
 }

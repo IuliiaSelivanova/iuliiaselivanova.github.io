@@ -4,10 +4,6 @@
 @use "./projects.scss";
 @use "./contacts.scss";
 
-// * {
-//   border: 1px solid red;
-// }
-
 html,
 body {
   background-color: vars.$clr-main-bg;
@@ -26,9 +22,9 @@ body {
   height: 100%;
 }
 
-.bg-warning {
-  background-color: vars.$accent-clr !important;
-}
+// .bg-warning {
+//   background-color: vars.$accent-clr !important;
+// }
 
 @media screen and (min-width: 1600px) {
   .container {

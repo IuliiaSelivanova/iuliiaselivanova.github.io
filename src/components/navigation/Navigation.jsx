@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { NavLink } from "react-router";
 
 const Navigation = () => {
   return (
@@ -31,23 +32,32 @@ const Navigation = () => {
 
         <ul className="navbar-nav flex-grow-1 justify-content-start">
           <li className="nav-item">
-            <a
+            <NavLink
+              to="/"
               className="nav-link"
               aria-current="page"
               href="#"
             >
               Обо мне
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <NavLink
+              to="/portfolio"
+              className="nav-link"
+              href="#"
+            >
               Портфолио
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <NavLink
+              to="/contacts"
+              className="nav-link"
+              href="#"
+            >
               Контакты
-            </a>
+            </NavLink>
           </li>
         </ul>
       </div>

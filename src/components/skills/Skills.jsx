@@ -14,7 +14,7 @@ const Skills = () => {
       if (skillsRef.current) {
         // ширина блока с навыками + 40px padding родительского блока >= ширины окна
         setIsMobile(
-          skillsRef.current.offsetWidth + 40 >=
+          skillsRef.current.offsetWidth >=
             window.innerWidth,
         );
       }

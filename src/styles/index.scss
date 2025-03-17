@@ -4,6 +4,13 @@
 @use "./projects.scss";
 @use "./contacts.scss";
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body {
   background-color: vars.$clr-main-bg;
@@ -12,6 +19,10 @@ body {
   font-weight: 400;
   line-height: 1.65;
   height: 100%;
+}
+
+a {
+  text-decoration: none;
 }
 
 #root {

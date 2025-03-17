@@ -1,0 +1,42 @@
+@use "./vars.scss";
+
+.contacts {
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.contacts__form {
+  width: 600px;
+}
+
+.contacts__btn {
+  margin-bottom: 1rem;
+}
+
+.socials {
+  gap: 25px;
+  cursor: pointer;
+
+  a {
+    color: vars.$primary-clr;
+    transition: color 0.3s ease-in;
+  }
+  a:hover {
+    color: vars.$accent-clr;
+  }
+
+  svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .contacts__form {
+    width: 100%;
+  }
+
+  .contacts__btn {
+    width: 100%;
+  }
+}

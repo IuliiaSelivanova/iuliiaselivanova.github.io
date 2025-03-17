@@ -17,7 +17,7 @@ const ProjectItem = ({ project }) => {
             </li>
           ))}
         </ul>
-        <div className="button-container d-flex justify-content-evenly">
+        <div className="button-container d-flex justify-content-evenly flex-wrap gap-2">
           <a
             className="btn btn-warning"
             href={project.repo}

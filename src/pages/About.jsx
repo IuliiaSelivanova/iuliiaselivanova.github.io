@@ -1,5 +1,5 @@
 import React from "react";
-import iconDownload from "../assets/icons/download-icon.svg";
+import DownloadIcon from "../assets/icons/download-icon.svg";
 import mainPortret from "../assets/images/cat1.png";
 
 import Skills from "../components/skills/Skills.jsx";
@@ -32,9 +32,9 @@ const AboutMe = () => {
               изучая, как создавать веб-приложения с
               использованием HTML, CSS, JavaScript, React.
             </p>
-            <button className="about__btn btn btn-warning ">
+            <button className="about__btn btn btn-warning gap-2">
               Резюме
-              <img src={iconDownload} alt="icon download" />
+              <DownloadIcon />
             </button>
           </div>
         </div>

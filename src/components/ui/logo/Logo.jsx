@@ -1,8 +1,19 @@
 import React from "react";
-// import logo from "../../../assets/icons/logo.svg";
 
 const Logo = () => {
-  return <div>Logo</div>;
+  return (
+    <a href="/">
+      <div className="logo d-flex align-items-center justify-content-center">
+        <div className="logo__text">Frontend</div>
+        <div className="logo__text logo__text--IS">
+          IS
+          <div className="point-wrapper">
+            <div className="point"></div>
+          </div>
+        </div>
+      </div>
+    </a>
+  );
 };
 
 export default Logo;

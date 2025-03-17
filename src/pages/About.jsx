@@ -5,6 +5,16 @@ import mainPortret from "../assets/images/cat1.png";
 import Skills from "../components/skills/Skills.jsx";
 
 const AboutMe = () => {
+  const triggerDownload = (fileName) => {
+    const element = document.createElement("a");
+    element.setAttribute("href", fileName);
+    element.setAttribute("download", fileName);
+    element.style.display = "none";
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  };
+
   return (
     <main className="about d-flex flex-column justify-content-evenly align-items-center">
       <div className="container">
@@ -32,7 +42,14 @@ const AboutMe = () => {
               изучая, как создавать веб-приложения с
               использованием HTML, CSS, JavaScript, React.
             </p>
-            <button className="about__btn btn btn-warning gap-2">
+            <button
+              onClick={() =>
+                triggerDownload(
+                  "/assets/SelivanovaIA_CV.pdf",
+                )
+              }
+              className="about__btn btn btn-warning gap-2"
+            >
               Резюме
               <DownloadIcon />
             </button>

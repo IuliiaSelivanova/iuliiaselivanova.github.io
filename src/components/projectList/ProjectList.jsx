@@ -4,7 +4,7 @@ import ProjectItem from "../projectItem/ProjectItem.jsx";
 
 const ProjectList = () => {
   return (
-    <section className="projectList d-flex flex-wrap justify-content-center mt-4">
+    <section className="projectList d-flex flex-wrap justify-content-evenly align-items-center">
       {projects.map((project) => (
         <ProjectItem key={project.id} project={project} />
       ))}

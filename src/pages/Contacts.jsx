@@ -3,11 +3,20 @@ import EmailIcon from "../assets/icons/email.svg";
 import GithubIcon from "../assets/icons/github.svg";
 import TelegramIcon from "../assets/icons/telegram.svg";
 import ModalResponse from "../components/modal/ModalResponse";
+import { motion } from "framer-motion";
+import LoadingIcon from "../assets/icons/loading-icon.svg";
 
+// Начальные значения инпутов формы
 const Initial_State_FormData = {
   name: "",
   email: "",
   message: "",
+};
+
+// проверка структуры email (валидация)
+const validateEmail = (email) => {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
 };
 
 const Contacts = () => {
@@ -16,18 +25,33 @@ const Contacts = () => {
   );
   const [message, setMessage] = useState("");
   const [showModal, setShowModal] = useState(false);
+  const [emailError, setEmailError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
+  // проверка email и сохранение в formData
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
+
+    if (name === "email") {
+      if (!validateEmail(value)) {
+        setEmailError(
+          "Пожалуйста, введите корректный email",
+        );
+      } else {
+        setEmailError("");
+      }
+    }
   };
 
+  // отправка сообщения (письма), используется formspree
   const handleSubmit = async (e) => {
     e.preventDefault();
     setShowModal(false);
+    setIsLoading(true);
 
     try {
       const response = await fetch(
@@ -51,10 +75,11 @@ const Contacts = () => {
     } finally {
       setShowModal(true);
       setFormData(Initial_State_FormData);
+      setIsLoading(false);
     }
   };
   return (
-    <footer className="contacts d-flex flex-column align-items-center">
+    <footer className="contacts d-flex flex-column align-items-center justify-content-around">
       <h1>Свяжитесь со мной</h1>
       <form
         onSubmit={handleSubmit}
@@ -93,6 +118,9 @@ const Contacts = () => {
             value={formData.email}
             onChange={handleInputChange}
           />
+          {emailError && (
+            <div className="text-danger">{emailError}</div>
+          )}
         </div>
         <div className="mb-3">
           <label
@@ -111,13 +139,25 @@ const Contacts = () => {
           ></textarea>
         </div>
 
-        <button
-          type="submit"
-          className="contacts__btn btn btn-warning"
-        >
-          Отправить
-        </button>
+        {/* При отправке сообщения меняется кнопка */}
+        {isLoading ? (
+          <button className="contacts__btn loading btn btn-warning d-flex align-items-center">
+            Отправляется
+            <LoadingIcon />
+          </button>
+        ) : (
+          <motion.button
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            transition={{ duration: 0.5 }}
+            type="submit"
+            className="contacts__btn btn btn-warning"
+          >
+            Отправить
+          </motion.button>
+        )}
 
+        {/* после отправки сообщения появляется модальное окно об успешной отправке или ошибке */}
         {showModal && (
           <ModalResponse
             message={message}

@@ -1,15 +1,21 @@
 @use "./skills";
-@use "./button";
 
 .about {
   flex-grow: 1;
-  // margin-top: 1rem;
   &__img {
     img {
       max-width: 350px;
       border-radius: 12px;
     }
   }
+}
+
+.about__text:last-of-type {
+  margin-bottom: 3rem;
+}
+
+.about__btn {
+  transform: scale(1);
 }
 
 @media screen and (max-width: 768px) {

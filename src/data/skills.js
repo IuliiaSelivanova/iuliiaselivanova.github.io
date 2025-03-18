@@ -77,6 +77,13 @@ const skills = [
     source:
       icons["../assets/icons/skills/vscode.svg"].default,
   },
+  {
+    id: 13,
+    name: "TypeScript",
+    source:
+      icons["../assets/icons/skills/typescript.svg"]
+        .default,
+  },
 ];
 
 export default skills;

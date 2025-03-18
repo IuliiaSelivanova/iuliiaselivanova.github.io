@@ -1,18 +1,43 @@
 @use "./vars.scss";
 
 .contacts {
-  margin-top: 20px;
-  gap: 20px;
+  height: 100%;
 }
 
+// форма
 .contacts__form {
   width: 600px;
+  min-height: 500px;
 }
-
+// кнопка Отправить
 .contacts__btn {
-  margin-bottom: 1rem;
+  margin-top: 10px;
+  gap: 8px;
 }
 
+// анимация для svg кнопки Отправляется при отправке сообщения
+.contacts__btn.loading svg {
+  animation: loadingRotate 2s infinite linear;
+}
+@keyframes loadingRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// фокус для инпутов
+.form-control:focus {
+  border-color: vars.$accent-clr;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+}
+.form-control:focus-visible {
+  outline: vars.$accent-clr;
+}
+
+// ссылки на email, github, telegram
 .socials {
   gap: 25px;
   cursor: pointer;
@@ -31,6 +56,7 @@
   }
 }
 
+// медиа запросы
 @media screen and (max-width: 650px) {
   .contacts__form {
     width: 100%;

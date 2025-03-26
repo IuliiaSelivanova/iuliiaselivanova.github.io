@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import createSvgSpritePlugin from "vite-plugin-svg-sprite";
 
 export default defineConfig({
-  base: "/portfolio",
+  base: "/",
   plugins: [
     react(),
     createSvgSpritePlugin({

@@ -1,5 +1,10 @@
+.modal-body {
+  display: flex;
+  flex-direction: column;
+}
 .modal__img {
   margin-bottom: 10px;
+  justify-self: center;
 }
 .modal_desc {
   margin-bottom: 10px;
@@ -10,4 +15,8 @@
 }
 .modal.show .modal-dialog {
   transform: scale(1);
+}
+
+.modal-dialog {
+  max-width: 600px;
 }

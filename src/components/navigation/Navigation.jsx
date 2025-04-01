@@ -31,7 +31,11 @@ const Navigation = () => {
         </div>
 
         <ul className="navbar-nav flex-grow-1 justify-content-start">
-          <li className="nav-item">
+          <li
+            className="nav-item"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
             <NavLink
               to="/"
               className="nav-link"
@@ -41,7 +45,11 @@ const Navigation = () => {
               Обо мне
             </NavLink>
           </li>
-          <li className="nav-item">
+          <li
+            className="nav-item"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
             <NavLink
               to="/portfolio"
               className="nav-link"
@@ -50,7 +58,11 @@ const Navigation = () => {
               Портфолио
             </NavLink>
           </li>
-          <li className="nav-item">
+          <li
+            className="nav-item"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
             <NavLink
               to="/contacts"
               className="nav-link"

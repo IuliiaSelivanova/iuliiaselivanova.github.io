@@ -1,7 +1,6 @@
 import React from "react";
 import DownloadIcon from "../assets/icons/download-icon.svg";
-import mainPortret from "../assets/images/cat1.png";
-// import mainPortret from "../assets/images/portret.png";
+import mainPortret from "../assets/images/portret-1.png";
 import { motion } from "framer-motion";
 import Skills from "../components/skills/Skills.jsx";
 
@@ -24,7 +23,7 @@ const AboutMe = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="col-12 col-md d-flex justify-content-center about__img"
+            className="col-12 col-md d-flex about__img"
           >
             <img
               src={mainPortret}
@@ -106,7 +105,7 @@ const AboutMe = () => {
               }
             >
               <motion.button
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.8 }}
                 transition={{ duration: 0.5 }}
                 className="about__btn btn btn-warning gap-2 d-flex justify-content-center align-items-center"

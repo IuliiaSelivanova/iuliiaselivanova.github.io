@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 
 const images = import.meta.glob(
-  "../assets/images/projects/*.png",
+  "../assets/images/projects/*.*",
   {
     eager: true,
   },
@@ -35,7 +35,7 @@ const projects = [
   },
   {
     id: uuidv4(),
-    title: "Lading page",
+    title: "Landing page",
     stack: [
       { id: uuidv4(), name: "Pug" },
       { id: uuidv4(), name: "Sass" },
@@ -55,8 +55,9 @@ const projects = [
       images["../assets/images/projects/landing-page.png"]
         .default,
     backgroundImage:
-      images["../assets/images/projects/bg-mntn.png"]
-        .default,
+      images[
+        "../assets/images/projects/bg-landing-page.png"
+      ].default,
   },
 
   {
@@ -68,6 +69,8 @@ const projects = [
       { id: uuidv4(), name: "JavaScript" },
       { id: uuidv4(), name: "Axios" },
       { id: uuidv4(), name: "Audio API" },
+      { id: uuidv4(), name: "Jamendo Music API" },
+      { id: uuidv4(), name: "Vite" },
     ],
     description: {
       info: "Разработан интерфейс музыкального плеера с акцентом на удобство использования Включает список треков и информацию об аудиофайлах.",
@@ -77,9 +80,9 @@ const projects = [
         "Drag-and-Drop для загрузки собственных аудиофайлов",
       ],
     },
-    repo: "https://github.com/IuliiaSelivanova/Music-player",
+    repo: "https://github.com/IuliiaSelivanova/music-player-vite",
     website:
-      "https://iuliiaselivanova.github.io/Music-player/",
+      "https://iuliiaselivanova.github.io/music-player-vite/",
     image:
       images["../assets/images/projects/music-player.png"]
         .default,
@@ -110,7 +113,7 @@ const projects = [
       images["../assets/images/projects/login-form.png"]
         .default,
     backgroundImage:
-      images["../assets/images/projects/bg-login-form.png"]
+      images["../assets/images/projects/bg-login-form.jpg"]
         .default,
   },
   {
@@ -137,9 +140,10 @@ const projects = [
       ],
     },
     repo: "https://github.com/IuliiaSelivanova/blog-on-react",
-    website: "",
+    website:
+      "https://iuliiaselivanova.github.io/blog-on-react/",
     image:
-      images["../assets/images/projects/product-page.png"]
+      images["../assets/images/projects/blog-app.png"]
         .default,
     backgroundImage:
       images["../assets/images/projects/bg-blog-app.png"]

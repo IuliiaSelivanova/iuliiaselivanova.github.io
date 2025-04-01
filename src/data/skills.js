@@ -84,6 +84,12 @@ const skills = [
       icons["../assets/icons/skills/typescript.svg"]
         .default,
   },
+  {
+    id: 14,
+    name: "Vite",
+    source:
+      icons["../assets/icons/skills/vite.svg"].default,
+  },
 ];
 
 export default skills;
